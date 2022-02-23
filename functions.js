@@ -131,7 +131,13 @@ Output:
 */
 
 export function getAllCoolFactorsOfEachCar(customers) {
-  return true;
+  const coolFactors = customers.reduce((acc, curr) => {
+    acc[curr.car_make]
+      ? acc[curr.car_make].push(curr.cool_factor)
+      : (acc[curr.car_make] = [curr.cool_factor]);
+    return acc;
+  }, {});
+  return coolFactors;
 }
 
 /* 
