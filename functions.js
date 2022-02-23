@@ -150,7 +150,16 @@ Output:
 */
 
 export function getAverageCoolFactorOfEachCar(customers) {
-  return true;
+  const coolFactors = getAllCoolFactorsOfEachCar(customers);
+  const keys = Object.keys(coolFactors);
+  const averages = keys.reduce((acc, curr) => {
+    acc[curr] =
+      coolFactors[curr].reduce((acc, current) => {
+        return acc + current;
+      }, 0) / coolFactors[curr].length;
+    return acc;
+  }, {});
+  return averages;
 }
 
 /* 
