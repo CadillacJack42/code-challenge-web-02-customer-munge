@@ -59,7 +59,13 @@ Output:
 */
 
 export function getTotalOfEachGender(customers) {
-  return true;
+  const genderCount = customers.reduce((acc, curr) => {
+    console.log(acc, curr.gender);
+    acc[curr.gender] ? acc[curr.gender]++ : (acc[curr.gender] = 1);
+    return acc;
+  }, {});
+  console.log(genderCount);
+  return genderCount;
 }
 
 /* 
