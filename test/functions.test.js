@@ -1,129 +1,171 @@
 // IMPORT MODULES under test here:
-import { 
-    greetUsersOverAge60,
-} from '../functions.js';
-import customers from './data.js';
+import { greetUsers, greetUsersOverAge60, addAllAges } from "../functions.js";
+import customers from "./data.js";
 
 const { test, skip } = QUnit;
 
-skip('greetUsers', (expect) => {
-    const expected = true;
+test("greetUsers", (expect) => {
+  const expected = [
+    "Hello Suzi Summerson",
+    "Hello Boot Penton",
+    "Hello Cacilia Caramuscia",
+    "Hello Mattie Mungane",
+    "Hello Kathryne Gostling",
+    "Hello Cristal Oakman",
+    "Hello Mahmud Shingler",
+    "Hello Kenny Kepe",
+    "Hello Elena Guisby",
+    "Hello Irene Kynvin",
+    "Hello Debor Lashmar",
+    "Hello Christian Churchill",
+    "Hello Fawnia Cowdroy",
+    "Hello Eli Perigo",
+    "Hello Parker Goodboddy",
+    "Hello Leeland Bonome",
+    "Hello Lowe Driussi",
+    "Hello Tracy Chidlow",
+    "Hello Dimitri Ochiltree",
+    "Hello Sascha Yanin",
+    "Hello Emmaline Horribine",
+    "Hello Erinna Swires",
+    "Hello Erroll Reade",
+    "Hello Ilaire O'Codihie",
+    "Hello Anatol Gulley",
+    "Hello Celestine Teodori",
+    "Hello Brandi Sawdon",
+    "Hello Atlanta Oneil",
+    "Hello Salomone Merkle",
+    "Hello Alta Sulter",
+    "Hello Marys Allsopp",
+    "Hello Marilin Ellacott",
+    "Hello Alexandros Cornell",
+    "Hello Matti Haller",
+    "Hello Henryetta Cheng",
+    "Hello Gennie Saura",
+    "Hello Sherwynd Wiggans",
+    "Hello Thorn McMeekin",
+    "Hello Esmaria Moukes",
+    "Hello Dietrich Gladebeck",
+    "Hello Karol Rosa",
+    "Hello Manya Fodden",
+    "Hello Casi Waterland",
+    "Hello Munroe Walthall",
+    "Hello Tannie Sedman",
+  ];
 
-    const actual = greetUsers();
+  const actual = greetUsers(customers);
 
-    expect.equal(actual, expected);
+  expect.deepEqual(actual, expected);
 });
 
+test("greetUsersOverAge60", (expect) => {
+  const expected = [
+    "Hello Suzi Summerson!",
+    "Hello Boot Penton!",
+    "Hello Cacilia Caramuscia!",
+    "Hello Cristal Oakman!",
+    "Hello Kenny Kepe!",
+    "Hello Dimitri Ochiltree!",
+    "Hello Ilaire O'Codihie!",
+    "Hello Anatol Gulley!",
+    "Hello Salomone Merkle!",
+    "Hello Alta Sulter!",
+    "Hello Alexandros Cornell!",
+    "Hello Thorn McMeekin!",
+    "Hello Esmaria Moukes!",
+    "Hello Munroe Walthall!",
+    "Hello Tannie Sedman!",
+  ];
 
-test('greetUsersOverAge60', (expect) => {
-    const expected = [
-        'Hello Suzi Summerson!',
-        'Hello Boot Penton!',
-        'Hello Cacilia Caramuscia!',
-        'Hello Cristal Oakman!',
-        'Hello Kenny Kepe!',
-        'Hello Dimitri Ochiltree!',
-        "Hello Ilaire O'Codihie!",
-        'Hello Anatol Gulley!',
-        'Hello Salomone Merkle!',
-        'Hello Alta Sulter!',
-        'Hello Alexandros Cornell!',
-        'Hello Thorn McMeekin!',
-        'Hello Esmaria Moukes!',
-        'Hello Munroe Walthall!',
-        'Hello Tannie Sedman!'
-    ];
+  const actual = greetUsersOverAge60(customers);
 
-    const actual = greetUsersOverAge60(customers);
-
-    expect.deepEqual(actual, expected);
+  expect.deepEqual(actual, expected);
 });
 
-skip('addAllAges', (expect) => {
-    const expected = true;
+test("addAllAges", (expect) => {
+  const expected = 2125;
 
-    const actual = greetUsers();
+  const actual = addAllAges(customers);
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
+skip("getAverageCoolFactor", (expect) => {
+  const expected = true;
 
-skip('getAverageCoolFactor', (expect) => {
-    const expected = true;
+  const actual = greetUsers();
 
-    const actual = greetUsers();
-
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
-skip('getTotalOfEachGender', (expect) => {
-    const expected = true;
+skip("getTotalOfEachGender", (expect) => {
+  const expected = true;
 
-    const actual = greetUsers();
+  const actual = greetUsers();
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
-skip('getGenderBreakdownOfFordOwners', (expect) => {
-    const expected = true;
+skip("getGenderBreakdownOfFordOwners", (expect) => {
+  const expected = true;
 
-    const actual = greetUsers();
+  const actual = greetUsers();
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
-skip('getGenderBreakdownOfEachCar', (expect) => {
-    const expected = true;
+skip("getGenderBreakdownOfEachCar", (expect) => {
+  const expected = true;
 
-    const actual = greetUsers();
+  const actual = greetUsers();
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
-skip('getAllCoolFactorsOfEachCar', (expect) => {
-    const expected = true;
+skip("getAllCoolFactorsOfEachCar", (expect) => {
+  const expected = true;
 
-    const actual = greetUsers();
+  const actual = greetUsers();
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
-skip('getAverageCoolFactorOfEachCar', (expect) => {
-    const expected = true;
+skip("getAverageCoolFactorOfEachCar", (expect) => {
+  const expected = true;
 
-    const actual = greetUsers();
+  const actual = greetUsers();
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
-skip('getAverageCoolFactor', (expect) => {
-    const expected = true;
+skip("getAverageCoolFactor", (expect) => {
+  const expected = true;
 
-    const actual = greetUsers();
+  const actual = greetUsers();
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
-skip('getAverageCoolFactor', (expect) => {
-    const expected = true;
+skip("getAverageCoolFactor", (expect) => {
+  const expected = true;
 
-    const actual = greetUsers();
+  const actual = greetUsers();
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
-skip('getCoolFactorsByAgeBracket', (expect) => {
-    const expected = true;
+skip("getCoolFactorsByAgeBracket", (expect) => {
+  const expected = true;
 
-    const actual = greetUsers();
+  const actual = greetUsers();
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
 
-skip('getAverageCoolFactorByAgeBracket', (expect) => {
-    const expected = true;
+skip("getAverageCoolFactorByAgeBracket", (expect) => {
+  const expected = true;
 
-    const actual = true;
+  const actual = true;
 
-    expect.equal(actual, expected);
+  expect.equal(actual, expected);
 });
