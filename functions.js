@@ -180,7 +180,7 @@ Output:
 
 export function makeAgeBrackets(customers) {
   const brackets = customers.reduce((acc, curr) => {
-    const group = Math.ceil(curr.age / 10);
+    const group = Math.floor(curr.age / 10);
     acc[`${group}${0}`] ? acc[`${group}${0}`]++ : (acc[`${group}${0}`] = 1);
     return acc;
   }, {});

@@ -309,16 +309,17 @@ test("getAverageCoolFactorOfEachCar", (expect) => {
 
 test("makeAgeBrackets", (expect) => {
   const expected = {
-    10: 7,
-    100: 8,
-    20: 7,
-    30: 3,
-    40: 7,
-    50: 1,
-    60: 5,
-    70: 1,
-    80: 4,
-    90: 2,
+    "00": 6,
+    10: 8,
+    100: 2,
+    20: 2,
+    30: 7,
+    40: 2,
+    50: 5,
+    60: 1,
+    70: 3,
+    80: 2,
+    90: 7,
   };
 
   const actual = makeAgeBrackets(customers);
