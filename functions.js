@@ -109,7 +109,15 @@ Output:
 */
 
 export function getGenderBreakdownOfEachCar(customers) {
-  return true;
+  const breakdown = customers.reduce((acc, curr) => {
+    !acc[curr.car_make] && (acc[curr.car_make] = {});
+    acc[curr.car_make][curr.gender]
+      ? acc[curr.car_make][curr.gender]++
+      : (acc[curr.car_make][curr.gender] = 1);
+
+    return acc;
+  }, {});
+  return breakdown;
 }
 
 /* 
