@@ -179,7 +179,12 @@ Output:
 */
 
 export function makeAgeBrackets(customers) {
-  return true;
+  const brackets = customers.reduce((acc, curr) => {
+    const group = Math.ceil(curr.age / 10);
+    acc[`${group}${0}`] ? acc[`${group}${0}`]++ : (acc[`${group}${0}`] = 1);
+    return acc;
+  }, {});
+  return brackets;
 }
 
 /* 
